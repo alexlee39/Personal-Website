@@ -1,0 +1,194 @@
+    /*TODO*/
+/*
+-Line 75--> Why does background-attachment fixed cause background-img to scroll
+when no attachments causes it to not scroll
+
+-Add responsiveness to background img(resize background img using media queries)
+
+-Fix responsiveness in nav bar (Sol: media queries?)
+-----Create a media query to create a bar for the navbar using JS and link the three pages within the bar.  
+
+
+
+-Fix the 4 boxes talking abt my life to have same size, etc.
+
+-Add the infamous copyright grey bar(including copyright, abt, logos(github,social media, etc)
+
+*/
+
+/*Ideas
+-Change the bullet pts in 4 main boxes into boxes where u can click on them to check them off
+-Using JS --> We would create replace the box with a checked box (and vice versa)
+
+-Using JS creating a hamburger menu to add responsiveness for the nav bar
+
+-Arrow keys added to navbar menu to add options to click for broader menus
+--> Use JS to create a drop down menu for these additional options
+
+-For other pgs we add a way to hover over some topic(text) to pull up a box describing what 
+that box correlates to (Using JS) Ex:  Hovering over CSE8B(JAVA) pulls up OOP concepts like polymorphism
+*/
+*{
+    /* box-sizing: border-box; */
+    margin: 0;
+    padding: 0;
+} 
+
+body{
+    background-color:#f4f4f4;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+img{
+    width: 40%;
+    /* max-width: 1200px; */
+}
+
+.container{
+    /*max-width: 1000px;  /* We need to set the max width of my background img to be around*/
+    margin: 0 auto; 
+    padding: 0 15px;
+}  
+
+.navbar {
+    background-color: royalblue;
+    margin: 0 auto;
+    padding: 0 10px; 
+    height: 60px;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar .container .logo{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.navbar ul{
+    display:flex;
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+.navbar li{    
+    display: inline;
+    padding: 0 12px;
+}
+
+.navbar a{
+    color:black;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.navbar a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.navbar h1{
+    margin: 0;
+}
+
+/* Things to fix background img --> Maybe don't cover the whole page but 
+    have the image centered so as it shrinks it continues to stay centered */
+#showcase{
+    min-height: 800px;
+    background: url('images/mystory.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;   
+    color:white;
+    text-align: center;
+}
+
+#preface{
+    padding-top: 20px;
+}
+
+.section-bars{
+    padding-top: 20px;
+    background-color: #f4f4f4;
+}
+
+.section-bars .container{
+    display:flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 10px;
+}
+
+.box{
+    background-color: lightcyan;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    padding: 0 0 10px 0;
+    /* margin: 0 10px; */
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+.box .subtitle {
+    margin: 10px;
+    padding: 0 10px;
+}
+
+.box .bullet-pts{
+    padding: 0 30px;
+}
+
+
+.section-bars a{
+    color:black;
+    text-decoration: none;
+} 
+
+.subtitle{
+    padding-bottom: 15px;
+}
+
+.extratxt{
+    padding: 0 30px;
+}
+
+#main-footer{
+    min-height: 400px;
+    margin-top: 100px;
+    background-color: gainsboro;
+}
+
+/*Holy Lines of Media Queries for Responsiveness*/
+@media(max-width: 900px){
+    #showcase{
+        min-height: 600px;
+    }
+}
+@media(min-width: 820px) {
+    .section-bars .container{
+        flex-direction: row;
+        margin: 0 30px;
+    }
+    
+}
+
+@media(max-width: 640px){
+    #showcase{
+        min-height: 450px;
+    }
+}
+
