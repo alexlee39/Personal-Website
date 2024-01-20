@@ -1,1 +1,2 @@
 # Personal Website that I created for myself to document some of my aspirations and process so far learning Computer Science.
+### Tutorial based on:  https://www.youtube.com/watch?v=r_hYR53r61M&t=4620s 
