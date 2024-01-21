@@ -13,7 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap" rel="stylesheet">
 
 
-        <link rel = "stylesheet" href = "style.css"> 
+        <link rel = "stylesheet" type = "text/css" href = "style.css"> 
+        <!-- <link id = "theme-css" rel = "stylesheet" type = "text/css" href = "bluetheme.css">  -->
+        <!-- <link id = "theme-css" rel = "stylesheet" type = "text/css" href = "greentheme.css">  -->
+        <link id = "theme-css" rel = "stylesheet" type = "text/css" href = ""> 
 
     <title> Alex's Website </title>
 </head>
@@ -50,10 +53,10 @@
                     <h5 style = "text-align: center; line-height: 0;"> Personalized Theme</h5>
                     
                     <div id = "theme-options-wrapper">
-                        <div id = "light-mode" class = "theme-dot"></div>
-                        <div id = "blue-mode" class = "theme-dot"></div>
-                        <div id = "green-mode" class = "theme-dot"></div>
-                        <div id = "purple-mode" class = "theme-dot"></div>
+                        <div data-mode = "light" id = "light-mode" class = "theme-dot"></div>
+                        <div data-mode = "blue" id = "blue-mode" class = "theme-dot"></div>
+                        <div data-mode = "green" id = "green-mode" class = "theme-dot"></div>
+                        <div data-mode = "purple" id = "purple-mode" class = "theme-dot"></div>
                     </div>
 
                     <p id = "settings-note"> *Theme settings will be saved for <br> your next visit</p>
@@ -100,8 +103,8 @@
                     <h4> Top Expertise</h4>
 
                     <p> 
-                        Currently, I'm most comfortable coding in C++ but I'm also proficient in 
-                        Java, Python, C. I'm still learning and honing my skills in JavaScript and 
+                        Currently, I'm most comfortable coding in C++ and Java but I'm also proficient in 
+                        Python. I'm still learning and honing my skills in JavaScript and 
                         will expand on these technical skills and other languages such as React, Postgres,
                         and many more to come in the future.
                         <br>
@@ -146,15 +149,29 @@
             </div>
         </div>
     </section>
-    <section class = "s1">
+    <!-- <section class = "s1">
         <div class = "main-container">
             Porfolio
         </div>
-    </section>
+    </section> -->
     <section class = "s2">
         <div class = "main-container">
-            Contact
+            <h3 style = "text-align: center;"> Get in touch</h3>
+
+            <form id = "contact-form" > 
+                <label> Name</label>
+                <input class = "input-field" type = "text" name = "name">
+                <label> Subject</label>
+                <input class =  "input-field" type = "text" name = "subject">
+                <label> Email</label>
+                <input class = "input-field" type = "text" name = "email">
+                <label> Message</label>
+                <textarea class = "input-field" name = "message"></textarea>
+                <input type = "submit" id = "submit-btn" value = "Send"> 
+            </form>
         </div>
     </section>
+
+    <script src = "index.js"></script>
 </body>
 </html>
