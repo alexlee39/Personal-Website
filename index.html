@@ -140,11 +140,6 @@
                             <img class = "SocialLogos" src = "images/GitHub-logo.jpg">                        
                         </a>
                     </div>
-
-                    <!-- <a href = "https://www.linkedin.com/in/alexander-lee-855a96236/" > LinkedIn </a> -->
-                    <!-- <a href = "https://github.com/alexlee39?tab=repositories" target = "_blank">  </a> -->
-                    <!-- <a href = "https://twitter.com/Voltagesz" > Twitter </a> -->
-
                 </div>
             </div>
         </div>
@@ -158,20 +153,26 @@
         <div class = "main-container">
             <h3 style = "text-align: center;"> Get in touch</h3>
 
-            <form id = "contact-form" > 
+            <form id = "contact-form"> 
                 <label> Name</label>
-                <input class = "input-field" type = "text" name = "name">
+                <input class = "input-field" type = "text" name = "name" id = "name">
                 <label> Subject</label>
-                <input class =  "input-field" type = "text" name = "subject">
+                <input class =  "input-field" type = "text" name = "subject" id = "subject">
                 <label> Email</label>
-                <input class = "input-field" type = "text" name = "email">
+                <input class = "input-field" type = "text" name = "email" id = "email">
                 <label> Message</label>
-                <textarea class = "input-field" name = "message"></textarea>
-                <input type = "submit" id = "submit-btn" value = "Send"> 
+                <textarea class = "input-field" name = "message" id = "message"></textarea>
+                <!-- <input type = "submit" id = "submit-btn" value = "Send">   -->
+                <!-- Current line above sends an HTTP Request POST but idk how to set up the HTTP Post Request to use as an email -->
+                <button id = "submit-btn"> Send </button>
             </form>
         </div>
     </section>
-
     <script src = "index.js"></script>
-</body>
+    <script type = "text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+          emailjs.init("QYpEYSF1U7C5aHl7z");
+        })();
+      </script></body>
 </html>
